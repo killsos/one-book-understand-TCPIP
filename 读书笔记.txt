@@ -61,6 +61,11 @@ TCP的三次握手
 Three-way shakehand
 
 客户端                             服务器
+1    SYN 1 SEQ x   客户端发送服务器
+2    SYN 1 ACK 1  SEQ y ACK x+1  服务器发送客户端
+3    ACK 1 SEQ x+1  ACK y+1   客户端发送服务器
+
+
 1   客户端发送  SYN  SEQ=x  向服务器建立连接的请求
 2   服务器发送  SYN ACK 这两个标志位  SEQ=y ACK=x+1 向客户端发一个报文 
                                                   这个报文确认服务器同意客户端
